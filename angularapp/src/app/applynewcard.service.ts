@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+
 import { NewCard } from './new-card';
 
 @Injectable({
@@ -11,10 +11,10 @@ export class ApplynewcardService {
   constructor(private _http:HttpClient) {
 
   }
-  fetchValuesFromRemote():Observable<any>{
-   return this._http.get("http://localhost:8080/getValues");
+  fetchValuesFromRemote(newcard:NewCard):any{
+   return this._http.get("https://8080-fbfacdbfeeafbbbcbaebfcfdbcedfe.examlyiopb.examly.io/getValues");
  }
- addDetailsToRemote(newcard:NewCard):Observable<any>{
-   return this._http.post<any>("http://localhost:8080/addValues",newcard);
+ addDetailsToRemote(newcard:NewCard):any{
+   return this._http.post<any>("https://8080-fbfacdbfeeafbbbcbaebfcfdbcedfe.examlyiopb.examly.io/addValues",newcard);
  }
 }

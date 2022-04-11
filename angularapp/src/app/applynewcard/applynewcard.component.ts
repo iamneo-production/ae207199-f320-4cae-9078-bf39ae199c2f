@@ -12,10 +12,11 @@ export class ApplynewcardComponent implements OnInit {
   newcard=new NewCard();
 
   screen = 1;
+  
   constructor(private _route:Router,private _service:ApplynewcardService) { }
 
   ngOnInit() {
-    this._service.fetchValuesFromRemote().subscribe(
+    this._service.fetchValuesFromRemote(this.newcard).subscribe(
       data=>console.log("response recevied"),
       error=>console.log("error occured")
 
