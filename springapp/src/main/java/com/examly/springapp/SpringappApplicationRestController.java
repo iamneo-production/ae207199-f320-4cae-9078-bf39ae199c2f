@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.examly.springapp.NewCard;
 import com.examly.springapp.CardService;
-@CrossOrigin(allowedHeaders="*",origins="*")
+@CrossOrigin(origins="https://8081-fbfacdbfeeafbbbcbaebfcfdbcedfe.examlyiopb.examly.io")
 @RestController
+
 
 public class SpringappApplicationRestController {
     @Autowired
