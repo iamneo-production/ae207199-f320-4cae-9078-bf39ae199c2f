@@ -1,0 +1,446 @@
+<form #addDetails="ngForm">
+  <div class="container" id="newcardBody">
+    <h1>New Card Form</h1>
+    <mat-card>
+      <mat-card-title> </mat-card-title>
+      <br />
+      <mat-card-content *ngIf="screen == 1">
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="firstName">First name</mat-label>
+                <input
+                  matInput
+                  placeholder="enter your first name"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.firstName"
+                  name="firstName"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="lastName">Last name</mat-label>
+                <input
+                  matInput
+                  placeholder="enter your last name"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.lastName"
+                  name="lastName"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="male/female">Male or Female</mat-label>
+                <input
+                  matInput
+                  placeholder="enter your gender"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.gender"
+                  name="gender"
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="fatherName">Father name</mat-label>
+                <input
+                  matInput
+                  placeholder="enter your father name"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.fathername"
+                  name="fathername"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="phoneNumber">Phone number</mat-label>
+                <input
+                  matInput
+                  type="tel"
+                  matInput
+                  placeholder="enter your phone number"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.phonenumber"
+                  name="phonenumber"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="alternateNumber">Alternate number</mat-label>
+                <input
+                  matInput
+                  type="tel"
+                  matInput
+                  placeholder="enter your alternate number"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.alternatenumber"
+                  name="alternatenumber"
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="motherName">Mother name</mat-label>
+                <input
+                  matInput
+                  placeholder="enter your mother name"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.mothername"
+                  name="mothername"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="emailId">Email Id</mat-label>
+                <input
+                  matInput
+                  type="email"
+                  matInput
+                  placeholder="enter your email Id"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.email"
+                  name="email"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <mat-label id="age">Age</mat-label>
+                <input
+                  matInput
+                  type="number"
+                  min="0"
+                  max="100"
+                  matInput
+                  placeholder="enter your age"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.age"
+                  name="age"
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <div class="flex-container">
+          <div class="flex-child grey">
+            <label> Address Information</label>
+            <br />
+            <br />
+            <label
+              >House Number:
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <input
+                  matInput
+                  type="text"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.housenumber"
+                  name="housenumber"
+                />
+              </mat-form-field>
+            </label>
+            <label
+              >Street Name:
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <input
+                  matInput
+                  type="text"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.streetname"
+                  name="streetname"
+                />
+              </mat-form-field>
+            </label>
+            <div class="d-flex">
+              <div class="w-full" style="margin-right: 1rem">
+                <label
+                  >Area
+                  <mat-form-field
+                    class="form-group example-full-width"
+                    appearance="outline"
+                  >
+                    <input
+                      matInput
+                      type="text"
+                      class="form-control"
+                      required
+                      [(ngModel)]="newcard.area"
+                      name="area"
+                    />
+                  </mat-form-field>
+                </label>
+              </div>
+              <div class="w-full">
+                <label
+                  >Pin Code
+                  <mat-form-field
+                    class="form-group example-full-width"
+                    appearance="outline"
+                  >
+                    <input
+                      matInput
+                      type="text"
+                      class="form-control"
+                      required
+                      [(ngModel)]="newcard.pincode"
+                      name="pincode"
+                    />
+                  </mat-form-field>
+                </label>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="w-full" style="margin-right: 1rem">
+                <label
+                  >State
+                  <mat-form-field
+                    class="form-group example-full-width"
+                    appearance="outline"
+                  >
+                    <input
+                      matInput
+                      type="text"
+                      class="form-control"
+                      required
+                      [(ngModel)]="newcard.state"
+                      name="state"
+                    />
+                  </mat-form-field>
+                </label>
+              </div>
+              <div class="w-full">
+                <label
+                  >Nationality
+                  <mat-form-field
+                    class="form-group example-full-width"
+                    appearance="outline"
+                  >
+                    <input
+                      matInput
+                      type="text"
+                      class="form-control"
+                      required
+                      [(ngModel)]="newcard.nationality"
+                      name="nationality"
+                    />
+                  </mat-form-field>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-child grey">
+            <label> Permenant Address Information</label>
+            <br />
+            <br />
+            <label
+              >House Number:
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <input
+                  matInput
+                  type="text"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.housenumberp"
+                  name="housenumberp"
+                />
+              </mat-form-field>
+            </label>
+            <label
+              >Street Name:
+              <mat-form-field
+                class="form-group example-full-width"
+                appearance="outline"
+              >
+                <input
+                  matInput
+                  type="text"
+                  class="form-control"
+                  required
+                  [(ngModel)]="newcard.streetnamep"
+                  name="streetnamep"
+                />
+              </mat-form-field>
+            </label>
+            <div class="d-flex">
+              <div class="w-full" style="margin-right: 1rem">
+                <label
+                  >Area
+                  <mat-form-field
+                    class="form-group example-full-width"
+                    appearance="outline"
+                  >
+                    <input
+                      matInput
+                      type="text"
+                      class="form-control"
+                      required
+                      [(ngModel)]="newcard.areap"
+                      name="areap"
+                    />
+                  </mat-form-field>
+                </label>
+              </div>
+              <div class="w-full">
+                <label
+                  >Pin Code
+                  <mat-form-field
+                    class="form-group example-full-width"
+                    appearance="outline"
+                  >
+                    <input
+                      matInput
+                      type="text"
+                      class="form-control"
+                      required
+                      [(ngModel)]="newcard.pincodep"
+                      name="pincodep"
+                    />
+                  </mat-form-field>
+                </label>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="w-full" style="margin-right: 1rem">
+                <label
+                  >State
+                  <mat-form-field
+                    class="form-group example-full-width"
+                    appearance="outline"
+                  >
+                    <input
+                      matInput
+                      type="text"
+                      class="form-control"
+                      required
+                      [(ngModel)]="newcard.statep"
+                      name="statep"
+                    />
+                  </mat-form-field>
+                </label>
+              </div>
+              <div class="w-full">
+                <label
+                  >Nationality
+                  <mat-form-field
+                    class="form-group example-full-width"
+                    appearance="outline"
+                  >
+                    <input
+                      matInput
+                      type="text"
+                      class="form-control"
+                      required
+                      [(ngModel)]="newcard.nationalityp"
+                      name="nationalityp"
+                    />
+                  </mat-form-field>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-content *ngIf="screen == 2">
+        <div class="upload-container">
+          <mat-form-field appearance="fill" class="form-group w-full">
+            <mat-label>Upload Document (Mandatory Id Proof)</mat-label>
+            <mat-select
+              class="form-control"
+              required
+              [(ngModel)]="newcard.doctype"
+              name="doctype"
+            >
+              <mat-option value="AADHAR">AADHAR CARD</mat-option>
+              <mat-option value="PAN">PAN CARD</mat-option>
+              <mat-option value="Driving">DRIVING LICENSE</mat-option>
+              <mat-option value="INDIAN">INDIAN PASSPORT</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <label>Images or Documents (Upload below 2mb)</label>
+          <br />
+          <br />
+          <input
+            type="file"
+            class="form-control"
+            required
+            [(ngModel)]="newcard.filename"
+            name="filename"
+          />
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+        <div class="button-row">
+          <button mat-stroked-button class="btn" (click)="screen = 1">1</button>
+          <button mat-stroked-button class="btn" (click)="screen = 2">2</button>
+          <button mat-stroked-button class="next-btn" (click)="formsubmit()">
+            {{ screen == 1 ? "" : "Submit" }}
+          </button>
+        </div>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</form>
