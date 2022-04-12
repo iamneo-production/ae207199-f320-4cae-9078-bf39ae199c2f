@@ -9,13 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplynewcardService } from './applynewcard.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ApplynewcardComponent,
+    LoginComponent
 
   ],
   imports: [
